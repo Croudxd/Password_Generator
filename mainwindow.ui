@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">
+background-color: rgb(9, 38, 53);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
@@ -22,6 +26,10 @@
       <width>221</width>
       <height>24</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(27, 66, 66);
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Generate Number password</string>
@@ -35,6 +43,10 @@
       <width>201</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+color: rgb(158, 200, 185);</string>
     </property>
     <property name="text">
      <string>Generate Random number passwords</string>
@@ -62,6 +74,10 @@
       <height>25</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(158, 200, 185);
+color: rgb(255, 255, 255);</string>
+    </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
@@ -72,6 +88,10 @@
       <height>24</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(27, 66, 66);
+color: rgb(255, 255, 255);</string>
+    </property>
     <property name="text">
      <string>Generate word password</string>
     </property>
@@ -80,30 +100,39 @@
     <property name="geometry">
      <rect>
       <x>490</x>
-      <y>400</y>
+      <y>390</y>
       <width>151</width>
-      <height>21</height>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(158, 200, 185);</string>
     </property>
    </widget>
    <widget class="QPlainTextEdit" name="word2_text">
     <property name="geometry">
      <rect>
       <x>170</x>
-      <y>400</y>
+      <y>390</y>
       <width>151</width>
-      <height>21</height>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(158, 200, 185);</string>
     </property>
    </widget>
    <widget class="QPlainTextEdit" name="word3_text">
     <property name="geometry">
      <rect>
       <x>330</x>
-      <y>400</y>
+      <y>390</y>
       <width>151</width>
-      <height>21</height>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(158, 200, 185);</string>
     </property>
    </widget>
    <widget class="QTextEdit" name="textEdit">
@@ -115,6 +144,10 @@
       <height>41</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">
+background-color: rgb(92, 131, 116);</string>
+    </property>
    </widget>
    <widget class="QTextEdit" name="textEdit_2">
     <property name="geometry">
@@ -125,15 +158,22 @@
       <height>41</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: rgb(0, 0, 0);
+background-color: rgb(92, 131, 116);</string>
+    </property>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>370</y>
+      <x>290</x>
+      <y>350</y>
       <width>221</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(158, 200, 185);</string>
     </property>
     <property name="text">
      <string>Generate random password using 3 words</string>
@@ -153,6 +193,7 @@
     <property name="title">
      <string>Help</string>
     </property>
+    <addaction name="actionHelp_2"/>
    </widget>
    <addaction name="menuHelp"/>
   </widget>
@@ -163,6 +204,11 @@
    </property>
    <property name="menuRole">
     <enum>QAction::AboutRole</enum>
+   </property>
+  </action>
+  <action name="actionHelp_2">
+   <property name="text">
+    <string>Help</string>
    </property>
   </action>
  </widget>

@@ -5,7 +5,7 @@
 #include <QString>
 #include <QMessageBox>
 #include <vector>
-
+#include <QRandomGenerator>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -23,7 +23,7 @@ MainWindow::~MainWindow()
 }
 
 int randomNumber(){
-    int number = rand() % 10;
+    int number = QRandomGenerator::global()->bounded(0,9);
     return number;
 }
 
@@ -83,14 +83,12 @@ QString MainWindow::passwordAlgorithm(QString word1){
     char characters[11] = {'!', '@', '#', '$', '%' , '^' , '&' , '&' , '*' , '/' , '.'};
 
     for(int i =2; i < word1.length(); i+= 3){
-        int random = rand() % 11;
+        int random = QRandomGenerator::global()->bounded(0,11);
         QChar characterToReplace = QChar(characters[random]);
         word1.replace(i, 1, QString(characterToReplace));
 
     }
 
-    int number = rand() % 200;
-    word1 += QString::number(number);
     return word1;
 }
 
@@ -112,6 +110,8 @@ void MainWindow::on_pushButton_2_clicked()
     password += newWord1;
     password += newWord2;
     password += newWord3;
+    int number = rand() % 200;
+    password += QString::number(number);
     ui->textEdit_2->setText(password);
 }
 
@@ -143,4 +143,10 @@ QString MainWindow::on_word3_text_textChanged()
     return text;
 }
 
+
+
+void MainWindow::on_actionHelp_2_triggered()
+{
+    QMessageBox::warning(this, "Help", "<FONT COLOR='#9EC8B9'>For number passcode generation, select amount of numbers you would like (Max is 15). And click generate password. For phrasepass, add three words into the boxes above generate button. Click generate and it will return you a password using them 3 words.</FONT>");
+}
 
