@@ -22,8 +22,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-
 int randomNumber(){
     int number = rand() % 10;
     return number;
