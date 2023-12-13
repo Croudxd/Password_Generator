@@ -17,14 +17,14 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>90</y>
-      <width>80</width>
+      <x>290</x>
+      <y>120</y>
+      <width>221</width>
       <height>24</height>
      </rect>
     </property>
     <property name="text">
-     <string>Generate</string>
+     <string>Generate Number password</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -44,13 +44,86 @@
     <property name="geometry">
      <rect>
       <x>290</x>
-      <y>230</y>
+      <y>270</y>
       <width>271</width>
       <height>71</height>
      </rect>
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="passwordNumberPick">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>120</y>
+      <width>41</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>260</y>
+      <width>221</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Generate word password</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="word1_text">
+    <property name="geometry">
+     <rect>
+      <x>183</x>
+      <y>230</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="word2_text">
+    <property name="geometry">
+     <rect>
+      <x>343</x>
+      <y>230</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="word3_text">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>230</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>160</y>
+      <width>241</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>300</y>
+      <width>241</width>
+      <height>41</height>
+     </rect>
     </property>
    </widget>
   </widget>

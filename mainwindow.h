@@ -17,7 +17,23 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_pushButton_clicked();
+
+    void on_passwordNumberPick_editingFinished();
+
+    void on_pushButton_2_clicked();
+
+    QString on_word1_text_textChanged();
+
+    QString on_word2_text_textChanged();
+
+    QString on_word3_text_textChanged();
+
+    QString passwordAlgorithm(QString word1);
+
 private:
+    int length;
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H
