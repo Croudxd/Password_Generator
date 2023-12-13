@@ -17,11 +17,12 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 }
 
-
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+
 
 int randomNumber(){
     int number = rand() % 10;
@@ -77,6 +78,10 @@ void MainWindow::on_passwordNumberPick_editingFinished()
 
 
 QString MainWindow::passwordAlgorithm(QString word1){
+
+    if (word1.isEmpty() || word1.isNull()){
+         QMessageBox::warning(this, "Warning", "One or more word boxes are empty");
+    }
     char characters[11] = {'!', '@', '#', '$', '%' , '^' , '&' , '&' , '*' , '/' , '.'};
 
     for(int i =2; i < word1.length(); i+= 3){
@@ -98,6 +103,10 @@ void MainWindow::on_pushButton_2_clicked()
     QString word1 = on_word1_text_textChanged();
     QString word2 = on_word2_text_textChanged();
     QString word3 = on_word3_text_textChanged();
+    if (word1.isEmpty() || word2.isEmpty() || word3.isEmpty()) {
+        return;
+    }
+
     QString newWord1 = passwordAlgorithm(word1);
     QString newWord2 = passwordAlgorithm(word2);
     QString newWord3 = passwordAlgorithm(word3);
@@ -113,13 +122,8 @@ QString MainWindow::on_word1_text_textChanged()
 {
     QString text = ui->word1_text->toPlainText();
 
-    if (!text.isNull() && !text.isEmpty()) {
-        QMessageBox::warning(this, "Warning", "Enter word into 1 box");
-        return "";
-    } else {
-        // Handle the case when the text is either null or empty
-        return text;
-    }
+    return text;
+
 }
 
 
@@ -129,13 +133,8 @@ QString MainWindow::on_word2_text_textChanged()
 {
     QString text = ui->word2_text->toPlainText();
 
-    if (!text.isNull() && !text.isEmpty()) {
-        QMessageBox::warning(this, "Warning", "Enter word into 2 box");
-        return "";
-    } else {
-        // Handle the case when the text is either null or empty
-        return text;
-    }
+    return text;
+
 }
 
 
@@ -143,13 +142,7 @@ QString MainWindow::on_word3_text_textChanged()
 {
     QString text = ui->word3_text->toPlainText();
 
-    if (!text.isNull() && !text.isEmpty()) {
-        QMessageBox::warning(this, "Warning", "Enter word into 3 box");
-        return "";
-    } else {
-        // Handle the case when the text is either null or empty
-        return text;
-    }
+    return text;
 }
 
 

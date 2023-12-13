@@ -30,21 +30,21 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>50</y>
-      <width>161</width>
+      <x>330</x>
+      <y>90</y>
+      <width>201</width>
       <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>Generate Random passwords!</string>
+     <string>Generate Random number passwords</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>270</y>
+      <x>280</x>
+      <y>440</y>
       <width>271</width>
       <height>71</height>
      </rect>
@@ -67,7 +67,7 @@
     <property name="geometry">
      <rect>
       <x>290</x>
-      <y>260</y>
+      <y>430</y>
       <width>221</width>
       <height>24</height>
      </rect>
@@ -79,9 +79,9 @@
    <widget class="QPlainTextEdit" name="word1_text">
     <property name="geometry">
      <rect>
-      <x>183</x>
-      <y>230</y>
-      <width>141</width>
+      <x>490</x>
+      <y>400</y>
+      <width>151</width>
       <height>21</height>
      </rect>
     </property>
@@ -89,8 +89,8 @@
    <widget class="QPlainTextEdit" name="word2_text">
     <property name="geometry">
      <rect>
-      <x>343</x>
-      <y>230</y>
+      <x>170</x>
+      <y>400</y>
       <width>151</width>
       <height>21</height>
      </rect>
@@ -99,9 +99,9 @@
    <widget class="QPlainTextEdit" name="word3_text">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>230</y>
-      <width>141</width>
+      <x>330</x>
+      <y>400</y>
+      <width>151</width>
       <height>21</height>
      </rect>
     </property>
@@ -110,7 +110,7 @@
     <property name="geometry">
      <rect>
       <x>300</x>
-      <y>160</y>
+      <y>150</y>
       <width>241</width>
       <height>41</height>
      </rect>
@@ -119,11 +119,24 @@
    <widget class="QTextEdit" name="textEdit_2">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>300</y>
+      <x>280</x>
+      <y>460</y>
       <width>241</width>
       <height>41</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>370</y>
+      <width>221</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Generate random password using 3 words</string>
     </property>
    </widget>
   </widget>
@@ -136,8 +149,22 @@
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+   </widget>
+   <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::AboutRole</enum>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

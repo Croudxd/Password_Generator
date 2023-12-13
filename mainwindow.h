@@ -32,6 +32,8 @@ private slots:
 
     QString passwordAlgorithm(QString word1);
 
+    void handleHelpAction();
+
 private:
     int length;
     Ui::MainWindow *ui;
